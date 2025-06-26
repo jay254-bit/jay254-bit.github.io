@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Graphic Design Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #fdfdfd; color: #333; line-height: 1.6; }
+    header { background: #111; color: white; padding: 1.5rem; text-align: center; animation: fadeIn 1s ease-in; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+    nav a:hover { color: #ffd700; }
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+    h1, h2 { margin-bottom: 1rem; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .portfolio-grid img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .portfolio-grid img:hover { transform: scale(1.05); }
+    .service-list { list-style: none; padding-left: 1rem; }
+    .service-list li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; }
+    .service-list li::before { content: "✔"; position: absolute; left: 0; color: green; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+    .contact-form button { background: #111; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
+    .contact-form button:hover { background: #333; }
+    footer { text-align: center; padding: 2rem; background: #f0f0f0; color: #555; }
+    .social-links a { margin: 0 0.5rem; color: #111; text-decoration: none; font-weight: bold; }
+    .social-links a:hover { color: #0077b5; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      header, section, footer { padding: 2rem 1rem; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Graphic Design Portfolio</h1>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <img src="https://via.placeholder.com/300x200?text=Design+1" alt="Design 1">
+      <img src="https://via.placeholder.com/300x200?text=Design+2" alt="Design 2">
+      <img src="https://via.placeholder.com/300x200?text=Design+3" alt="Design 3">
+      <img src="https://via.placeholder.com/300x200?text=Design+4" alt="Design 4">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate graphic designer with experience in branding, social media content, posters, and digital design. I help businesses bring their ideas to life with clean, creative visuals that communicate clearly and boldly.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul class="service-list">
+      <li>Logo Design</li>
+      <li>Brand Identity</li>
+      <li>Social Media Posts</li>
+      <li>Flyers & Posters</li>
+      <li>Business Cards</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+      <p>Follow me on:</p>
+      <a href="https://www.instagram.com/jaygraphicsstudio" target="_blank">Instagram</a>
+      <a href="https://www.behance.net/yourhandle" target="_blank">Behance</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 My Graphic Design Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
