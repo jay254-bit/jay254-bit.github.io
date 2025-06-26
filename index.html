@@ -3,45 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Graphic Design Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Jay Graphics Studio | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background: #fdfdfd; color: #333; line-height: 1.6; }
-    header { background: #111; color: white; padding: 1.5rem; text-align: center; animation: fadeIn 1s ease-in; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
-    nav a:hover { color: #ffd700; }
-    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-    h1, h2 { margin-bottom: 1rem; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .portfolio-grid img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-    .portfolio-grid img:hover { transform: scale(1.05); }
-    .service-list { list-style: none; padding-left: 1rem; }
-    .service-list li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; }
-    .service-list li::before { content: "✔"; position: absolute; left: 0; color: green; }
-    .contact-form input, .contact-form textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 8px; }
-    .contact-form button { background: #111; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
-    .contact-form button:hover { background: #333; }
-    footer { text-align: center; padding: 2rem; background: #f0f0f0; color: #555; }
-    .social-links a { margin: 0 0.5rem; color: #111; text-decoration: none; font-weight: bold; }
-    .social-links a:hover { color: #0077b5; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f6;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      background: #003f5c;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f5c518;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 1.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .portfolio-grid img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .portfolio-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .service-list {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    .service-list li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem;
+      font-size: 1rem;
+    }
+    .service-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+    .testimonial {
+      background: #ffffff;
+      border-left: 4px solid #f5c518;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: bold;
+      color: #003f5c;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: #111;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #333;
+    }
+    .cv-download {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .cv-download a {
+      display: inline-block;
+      background: #003f5c;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .cv-download a:hover {
+      background: #f5c518;
+      color: #111;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eaeaea;
+      color: #444;
+      font-size: 0.9rem;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      color: #003f5c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #f5c518;
     }
     @media (max-width: 600px) {
-      header, section, footer { padding: 2rem 1rem; }
-      .portfolio-grid { grid-template-columns: 1fr; }
+      section, footer, header {
+        padding: 2rem 1rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Graphic Design Portfolio</h1>
+    <h1>Jay Graphics Studio</h1>
     <nav>
       <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -49,10 +175,10 @@
   <section id="portfolio">
     <h2>My Work</h2>
     <div class="portfolio-grid">
-      <img src="https://via.placeholder.com/300x200?text=Design+1" alt="brand poster">
-      <img src="https://via.placeholder.com/300x200?text=Design+2" alt="headphones design">
-      <img src="https://via.placeholder.com/300x200?text=Design+3" alt="leran">
-      <img src="https://via.placeholder.com/300x200?text=Design+4" alt="BRAND">
+      <img src="work1.jpg" alt="Design 1">
+      <img src="work2.jpg" alt="Design 2">
+      <img src="work3.jpg" alt="Design 3">
+      <img src="work4.jpg" alt="Design 4">
     </div>
   </section>
 
@@ -72,23 +198,37 @@
     </ul>
   </section>
 
+  <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+      <p>"Jay Graphics Studio helped transform my brand vision into reality. Highly professional and easy to work with."</p>
+      <cite>– Lydia M., Small Business Owner</cite>
+    </div>
+    <div class="testimonial">
+      <p>"I loved the clean, modern look of the social media designs. My audience grew significantly after the rebrand!"</p>
+      <cite>– Brian K., Content Creator</cite>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Contact Me</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message"></textarea>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
       <button type="submit">Send Message</button>
     </form>
     <div class="social-links">
       <p>Follow me on:</p>
       <a href="https://www.instagram.com/jaygraphicsstudio" target="_blank">Instagram</a>
-      <a href="https://www.behance.net/yourhandle" target="_blank">Behance</a>
+    </div>
+    <div class="cv-download">
+      <a href="cv.pdf" download>Download My CV</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 My Graphic Design Portfolio. All rights reserved.</p>
+    <p>© 2025 Jay Graphics Studio. All rights reserved.</p>
   </footer>
 </body>
 </html>
